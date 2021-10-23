@@ -10,3 +10,34 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+body{
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .snap {
+    scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+  }
+  .snap-y {
+    --scroll-snap-direction: y;
+  }
+  .snap-mandatory {
+    --scroll-snap-constraint: mandatory;
+  }
+  .snap-start {
+    scroll-snap-align: start;
+  }
+}
+
+.snap-class{
+  @apply snap-start;
+}
+
+::selection{
+  @apply text-pink-700;
+}
+
+.header-button{
+  @apply p-3 hover:text-pink-700;
+}
