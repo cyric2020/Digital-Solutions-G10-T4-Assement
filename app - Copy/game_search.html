@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="scrollbar-hide snap snap-y snap-mandatory">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+</head>
+<body class="bg-green-500 text-white">
+  <section class="h-screen snap-class">
+    <header class="flex justify-center font-semibold z-50">
+      <a href="" class="header-button">Projects</a>
+      <a href="" class="header-button">Games</a>
+      <div class="group header-button">
+        <a href="" class="header-button-np">Account</a>
+        <div class="hidden text-center group-hover:block">
+          <a href="" class="header-subbutton">a</a>
+        </div>
+      </div>
+    </header>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <h1 class="text-3xl font-bold text-center ">Search for a match</h1>
+      <div class="bg-white rounded-md overflow-hidden mt-3">
+        <input type="text" name="" id="search_input" class="bg-transparent text-black focus:outline-none pl-3 pr-3 pt-2 pb-2 w-30r">
+        <!-- <button class="bg-gray-500 pl-3 pr-3 pt-2 pb-2">Search</button> -->
+      </div>
+
+      <div id="app" v-if="search_results.length != 0" class="results bg-white rounded-md overflow-hidden mt-3 pl-5 pr-5 pt-3 pb-3 divide-y divide-gray-800">
+        <div v-for="result in search_results" class="result pt-1 pb-1 text-gray-800 font-semibold">
+          <h3 class="p-2 hover:bg-green-400 cursor-pointer rounded-md">{{ result.target }}</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://rawgit.com/farzher/fuzzysort/master/fuzzysort.js"></script>
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/search.js"></script>
+</body>
+</html>

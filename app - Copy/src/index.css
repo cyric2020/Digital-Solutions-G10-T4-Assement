@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+} */
+
+.w-50r{
+  width: 50rem;
+}
+
+.w-30r{
+  width: 30rem;
+}
+
+.mw-20r{
+  min-width: 20rem;
+}
+
+.mt-50p{
+  margin-top: 50%;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .snap {
+    scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+  }
+  .snap-y {
+    --scroll-snap-direction: y;
+  }
+  .snap-mandatory {
+    --scroll-snap-constraint: mandatory;
+  }
+  .snap-start {
+    scroll-snap-align: start;
+  }
+}
+
+.snap-class{
+  @apply snap-start;
+}
+
+/* ::selection{
+  @apply text-pink-700;
+} */
+
+.header-button{
+  @apply p-3 hover:text-pink-700;
+}
+
+.header-button-np{
+  @apply hover:text-pink-700;
+}
+
+.header-subbutton{
+  @apply p-3 hover:text-pink-700;
+}
+
+.house{
+  @apply bg-white text-gray-600 font-semibold rounded-md p-5 text-3xl flex mb-3 relative;
+}
+
+.key{
+  @apply bg-white text-gray-600 font-semibold rounded-md p-3 pl-5 pr-5 text-lg flex mb-3 relative;
+}
+
+.breakdown-container{
+  @apply h-4 w-30r ml-10 mr-10 transform -translate-x-1/2 -translate-y-1/2 bg-gray-100 flex absolute left-1/2 top-1/2 overflow-hidden;
+}
+
+.game{
+  @apply bg-white text-gray-600 font-semibold rounded-md p-3 pl-5 pr-5 text-lg flex mb-3 relative flex-grow m-3 mw-20r;
+}
