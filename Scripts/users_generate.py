@@ -31,7 +31,7 @@ last_names = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Mille
 
 users = []
 
-for i in range(1000):
+for i in range(100):
     id = '0' + str(random.randint(11111, 99999))
     gender = random.randint(0, 1)
     first_name = first_names_male[random.randint(0, (len(first_names_male)-1))] if (gender == 0) else first_names_female[random.randint(0, (len(first_names_female)-1))]

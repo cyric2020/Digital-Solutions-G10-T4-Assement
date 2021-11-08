@@ -29,13 +29,13 @@
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
       <h1 class="text-3xl font-bold text-center">Search for a match</h1>
       <div class="bg-white rounded-md overflow-hidden mt-3">
-        <input type="text" name="" id="search_input" class="bg-transparent text-black focus:outline-none pl-3 pr-3 pt-2 pb-2 w-30r" placeholder="Sport, Month Day Year, Team vs Team">
+        <input type="text" name="" id="search_input" class="bg-transparent text-black focus:outline-none pl-3 pr-3 pt-2 pb-2 w-30r" placeholder="Sport, Day Month Year, Team vs Team">
         <!-- <button class="bg-gray-500 pl-3 pr-3 pt-2 pb-2">Search</button> -->
       </div>
 
       <div id="app" v-if="search_results.length != 0" class="results bg-white rounded-md overflow-hidden mt-3 pl-5 pr-5 pt-3 pb-3 divide-y divide-gray-800">
         <div v-for="result in search_results" class="result pt-1 pb-1 text-gray-800 font-semibold">
-          <h3 class="p-2 hover:bg-green-400 cursor-pointer rounded-md">{{ result.target }}</h3>
+          <h3 class="p-2 hover:bg-green-400 cursor-pointer rounded-md" onclick="location='game.html'">{{ result.target }}</h3>
         </div>
       </div>
     </div>

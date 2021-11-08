@@ -35,7 +35,7 @@
 
       <div id="app" v-if="search_results.length != 0" class="results bg-white rounded-md overflow-hidden mt-3 pl-5 pr-5 pt-3 pb-3 divide-y divide-gray-800">
         <div v-for="result in search_results" class="result pt-1 pb-1 text-gray-800 font-semibold">
-          <h3 class="p-2 hover:bg-green-400 cursor-pointer rounded-md">{{ result.target }}</h3>
+          <h3 class="p-2 hover:bg-green-400 cursor-pointer rounded-md" onclick="location='profile.html'">{{ result.target }}</h3>
         </div>
       </div>
     </div>

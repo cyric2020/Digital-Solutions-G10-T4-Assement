@@ -8,7 +8,19 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'none': 'none',
+        'all': 'all',
+        'color': 'color',
+        'bg': 'background-color',
+        'border': 'border-color',
+        'colors': ['color', 'background-color', 'border-color'],
+        'opacity': 'opacity',
+        'transform': 'transform',
+        'width': 'width',
+      },
+    },
   },
   variants: {
     extend: {

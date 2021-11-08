@@ -109,7 +109,7 @@ body{
 }
 
 .details{
-  @apply w-full text-center md:text-3xl md:p-3;
+  @apply w-full text-right md:text-3xl md:p-3;
 }
 
 .time{
@@ -117,7 +117,7 @@ body{
 }
 
 .stat-title{
-  @apply text-center text-base p-3;
+  @apply text-left text-base p-3;
   min-width: 15rem;
   max-width: 20rem;
 }
@@ -130,4 +130,18 @@ body{
 
 .dropdown-items{
   @apply origin-top-right absolute right-0;
+}
+
+.dropdown-button{
+  @apply block bg-gray-200 px-4 py-1 rounded-md hover:bg-gray-300 focus:outline-none focus:bg-gray-300 w-full text-left;
+}
+
+.toggle-checkbox:checked {
+  @apply: right-0 border-green-400;
+  right: 0;
+  border-color: #68d391;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-green-400;
+  background-color: #68d391;
 }
