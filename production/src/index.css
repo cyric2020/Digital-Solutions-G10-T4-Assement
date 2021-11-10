@@ -1,0 +1,137 @@
+/* 
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+} */
+
+.w-30r{
+    width: 30rem;
+  }
+  
+  .mt-50p{
+    margin-top: 50%;
+  }
+  
+  body{
+    overflow-x: hidden;
+  }
+  
+  @layer utilities {
+    .snap {
+      scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+    }
+    .snap-y {
+      --scroll-snap-direction: y;
+    }
+    .snap-mandatory {
+      --scroll-snap-constraint: mandatory;
+    }
+    .snap-start {
+      scroll-snap-align: start;
+    }
+  }
+  
+  @layer base{
+    @variants responsive{
+      .w-50r{
+        width: 50rem;
+      }
+  
+      .w-18r{
+        width: 18rem;
+      }
+  
+      .mw-20r{
+        min-width: 20rem;
+      }
+  
+      .mw-full{
+        min-width: 100%;
+      }
+    }
+  }
+  
+  .snap-class{
+    @apply snap-start;
+  }
+  
+  /* ::selection{
+    @apply text-pink-700;
+  } */
+  
+  .header-button{
+    @apply p-3 hover:text-gray-200 relative;
+  }
+  
+  .header-button-np{
+    @apply p-3 hover:text-gray-200;
+  }
+  
+  .header-subbutton{
+    @apply text-white w-full px-3 hover:font-bold;
+  }
+  
+  .house{
+    @apply bg-white text-gray-600 font-semibold rounded-md p-5 text-3xl mb-3 relative flex border-l-4;
+  }
+  
+  .key{
+    @apply bg-white text-gray-600 font-semibold rounded-md p-3 pl-5 pr-5 text-lg flex mb-3 relative border-l-4;
+  }
+  
+  .breakdown-container{
+    @apply h-4 w-30r ml-10 mr-10 transform -translate-x-1/2 -translate-y-1/2 bg-gray-100 absolute left-1/2 top-1/2 overflow-hidden hidden md:flex;
+  }
+  
+  .game-m{
+    @apply -ml-7;
+  }
+  
+  .game{
+    @apply bg-white text-gray-600 font-semibold rounded-md p-3 pl-5 pr-5 text-lg flex mb-3 relative flex-grow md:m-3 mw-full md:mw-20r border-l-4;
+  }
+  
+  .small-game{
+    @apply bg-white text-gray-600 font-semibold rounded-md p-3 pl-5 pr-5 text-lg flex mb-3 relative flex-grow md:m-3 mw-full md:mw-20r border-l-4;
+  }
+  
+  .date{
+    @apply text-center text-base pr-3;
+    max-width: 3rem;
+  }
+  
+  .big-date{
+    @apply text-3xl font-bold w-full;
+  }
+  
+  .details{
+    @apply w-full text-right md:text-3xl md:p-3;
+  }
+  
+  .time{
+    @apply text-xl font-bold w-max md:text-3xl;
+  }
+  
+  .stat-title{
+    @apply text-left text-base p-3;
+    min-width: 15rem;
+    max-width: 20rem;
+  }
+  
+  .greyed{
+    background-color: lightgray !important;
+    border-color: lightgray !important;
+    color: gray !important;
+  }
+  
+  .dropdown-items{
+    @apply origin-top-right absolute right-0;
+  }
+  
+  .dropdown-button{
+    @apply block bg-gray-200 px-4 py-1 rounded-md hover:bg-gray-300 focus:outline-none focus:bg-gray-300 w-full text-left;
+  }

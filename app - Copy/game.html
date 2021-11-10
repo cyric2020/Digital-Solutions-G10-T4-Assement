@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body class="bg-green-500 text-white">
+    <section>
+      <header class="flex justify-center font-semibold z-50">
+        <a href="index.html" class="header-button">Home</a>
+        <div class="group header-button">
+          <a href="" class="header-button-np">Games</a>
+          <div class="hidden text-center group-hover:block dropdown-items">
+            <a href="game_search.html" class="header-subbutton">Search</a>
+            <a href="recent_games.html" class="header-subbutton">Recent</a>
+          </div>
+        </div>
+        <div class="group header-button">
+          <a href="" class="header-button-np">Account</a>
+          <div class="hidden text-center group-hover:block dropdown-items">
+            <a href="login.html" class="header-subbutton">Login</a>
+            <a href="profile.html" class="header-subbutton">Profile</a>
+            <a href="account_search.html" class="header-subbutton">Search</a>
+          </div>
+        </div>
+      </header>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <h1 class="text-5xl font-bold text-center w-50r">Game Stats</h1>
+            <div class="house mt-4">
+              <h2 class="">Game</h2>
+              <h2 class="ml-auto">Cricket</h2>
+            </div>
+            <div class="house mt-4">
+              <h2 class="">Date</h2>
+              <h2 class="ml-auto">12 August 2021</h2>
+            </div>
+            <div class="house mt-4">
+              <h2 class="">Grace &nbsp; 8</h2>
+              <h2 class="ml-auto">4 &nbsp; Mango Hill</h2>
+            </div>
+            <div class="house mt-4">
+              <h2 class="">Player Of The Match</h2>
+              <button class="ml-auto bg-gray-200 px-4 rounded-md text-base" id="voteBtn">Vote!</button>
+              <!-- make custom list selector -->
+              <div class="ml-auto bg-gray-200 rounded-md text-base hidden" id="dropdown">
+                <button class="dropdown-button">Michael Davis</button>
+                <button class="dropdown-button">Linda Jones</button>
+                <button class="dropdown-button">David Davis</button>
+                <button class="dropdown-button">Karen Smith</button>
+                <button class="dropdown-button">Karen Jones</button>
+                <button class="dropdown-button">Charles Davis</button>
+                <button class="dropdown-button">Jennifer Brown</button>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <overlay class="" id="app">
+      <div class="absolute top-0 left-0 bottom-0 right-0 bg-gray-600 opacity-70"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-md text-black p-4">
+        <h1 class="text-xl font-bold text-center">Vote</h1>
+        <div>
+          <div>
+            <label class="inline-flex items-center">
+              <input
+                type="radio"
+                class="form-radio"
+                name="radio"
+                value="1"
+                checked
+              />
+              <span class="ml-2">Option 1</span>
+            </label>
+          </div>
+          <div>
+            <label class="inline-flex items-center">
+              <input
+                type="radio"
+                class="form-radio"
+                name="radio"
+                value="1"
+                checked
+              />
+              <span class="ml-2">Option 1</span>
+            </label>
+          </div>
+          <div>
+            <label class="inline-flex items-center">
+              <input
+                type="radio"
+                class="form-radio"
+                name="radio"
+                value="1"
+                checked
+              />
+              <span class="ml-2">Option 1</span>
+            </label>
+          </div>
+        </div>
+        <button class="ml-auto bg-gray-200 px-4 py-1 rounded-md text-base w-full mt-3">Vote!</button>
+      </div>
+    </overlay> -->
+
+    <div class="absolute left-10 bottom-10 bg-green-700 rounded-md p-5 font-bold text-xl overflow-hidden hidden transition-width transition-slowest ease-linear" id="voteSubmit">
+      Vote submitted!
+      <div class="absolute left-0 bottom-0 h-1 bg-green-400" id="wait"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script type="module" src="/src/assets/main.js"></script>
+    <script type="module" src="src/assets/game.js"></script>
+</body>
+</html>
